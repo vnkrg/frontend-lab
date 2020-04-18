@@ -1,50 +1,48 @@
+
 const gulp = require('gulp')
-const cleanCSS = require('gulp-clean-css')
-const autoprefixer = require('gulp-autoprefixer')
+const { series, watch, parallel } = require('gulp')
+const sass = require('gulp-sass')
 const browserSync = require('browser-sync').create()
 
-gulp.task('html', () => {
+function htmlTask () {
     return gulp.src('src/*.html')
     .pipe(gulp.dest('build'))
-})
+    .pipe(browserSync.stream())
+}
 
-gulp.task('css', () => {
+function cssTask () {
     return gulp.src('src/css/**/*.css')
-    .pipe(autoprefixer({
-        overrideBrowserslist: ['cover 99.5%'],
-        cascade: false
-    }))
-    .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(gulp.dest('build/style'))
-})
+    .pipe(gulp.dest('build/css'))
+}
 
-gulp.task('img', () => {
+function sassTask () {
+    return gulp.src('src/scss/**/*.scss')
+    .pipe(sass().on('error',sass.logError))
+    .pipe(gulp.dest('build/css'))
+    .pipe(browserSync.stream())
+}
+
+function imageTask () {
     return gulp.src('src/images/**/*')
     .pipe(gulp.dest('build/images'))
-})
+    .pipe(browserSync.stream())
+}
 
-gulp.task('watch', function(){
-    gulp.watch('src/*.html', gulp.series('html')).on('change', browserSync.reload)
-    gulp.watch('src/*.css', gulp.series('css')).on('change', browserSync.reload)
-    gulp.watch('src/*', gulp.series('img')).on('change', browserSync.reload)
-})
-
-gulp.task('serve', function() {
+function serveTask () {
     browserSync.init({
         server: {
             baseDir: "./build"
         }
     })
-})
+}
 
-gulp.task('default', gulp.series(
-    gulp.parallel(
-        'html',
-        'css',
-        'img'
-    ),
-    gulp.parallel(
-        'serve',
-        'watch'
-    )
-))
+function watchTask () {
+    watch('src/*.html', htmlTask)
+    watch('src/scss/**/*.scss', sassTask)
+    watch('src/images/**/*', imageTask)
+}
+  
+exports.default = series(
+    parallel(htmlTask, cssTask, sassTask, imageTask),
+    parallel(serveTask, watchTask)
+)

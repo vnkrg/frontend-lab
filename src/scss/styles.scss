@@ -1,0 +1,333 @@
+$primary-color: RGB(249, 201, 16);
+$def-radius: 10px;
+
+body {
+    font-family: 'Oxanium', cursive;
+}
+a {
+    color: black;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $primary-color;
+    height: 3em;
+    #logo {
+        text-decoration: none;
+        margin-left: 1em;
+        h1 {
+            margin: 0px;
+            font-weight: bold;
+        }
+    }
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        a {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-right: 2em;
+            img {
+                height: 2em;
+                margin-right: 0.5em;
+            }
+        }
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $primary-color;
+    width: 1000px;
+    margin: 20px 25px 0px 25px;
+    border-radius: $def-radius;
+}
+
+#search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    form {
+        display: flex;
+        justify-content: center;
+        height: 2em;
+        padding: 20px;
+        width: 100%;
+        input {
+            border: none;
+            border-radius: 3px;
+        }
+        input[type=text] {
+            padding-left: 10px;
+        }
+        input[name=search] {
+            flex-grow: 3;
+            margin-right: 10px;
+        }
+        input[name=location] {
+            flex-grow: 1;
+            margin-right: 10px;
+        }
+        input[type=submit] {
+            background: white;
+            width: 5em;
+            &:hover {
+                background-color: RGB(233, 233, 233);
+            }
+        }
+    }
+    animation-name: appear1;
+    animation-duration: 1s;
+}
+@keyframes appear1 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+}
+
+#categories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container {
+        background-color: white;
+        border: 2px solid $primary-color;
+    }
+    ul {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        padding-bottom: 1em;
+        li {
+            width: 25%;
+            a {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 1em 1em 0px 1em;
+                img {
+                    background-color: white;
+                    height: 3em;
+                    margin-right: 0.5em;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+    animation-name: appear2;
+    animation-duration: 1.2s;
+}
+@keyframes appear2 {
+    from {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+}
+
+#ads {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    #ads-header {
+        display: flex;
+        justify-content: flex-start;
+        width: 1000px;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+    .items {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        flex-wrap: wrap;
+        article {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+            width: 23%;
+            $border-size: 2px;
+            margin-right: $border-size*2;
+            .image {
+                display: flex;
+                justify-content: center;
+                border-radius: $def-radius $def-radius 0px 0px;
+                border: $border-size solid $primary-color;
+                border-bottom: 0px;
+                background-color: RGB(233, 233, 233);
+                height: 150px;
+                width: 100%;
+                img {
+                    border-radius: inherit;
+                    object-fit: contain;
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+            }
+            .title {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                border-radius: 0px 0px $def-radius $def-radius;
+                border: $border-size solid $primary-color;
+                height: 100%;
+                width: 100%;
+                p {
+                    padding: 10px 10px 0px 10px;
+                }
+                .price {
+                    font-size: 1.5em;
+                }
+            }
+            &:hover {
+                box-shadow: $border-size 0px 10px rgba(0,0,0,0.5);
+                border-radius: $def-radius;
+                .title {
+                    background-color: $primary-color;
+                }
+            }
+        }
+        .hidden-item {
+            margin: 0px;
+            visibility: hidden;
+        }
+    }
+    #show-all {
+        margin: 20px 0px 20px 0px;
+        img {
+            height: 1em;
+            transform: translate(0, 20%);
+        }
+    }
+    animation-name: appear3;
+    animation-duration: 1.5s;
+}
+@keyframes appear3 {
+    from {
+        opacity: 0;
+    }
+    30% {
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+}
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        margin-bottom: 20px;
+    }
+    hr {
+        width: 100%;
+    }
+    nav ul {
+        display: flex;
+        li {
+            margin: 0px 20px 0px 20px;
+        }
+    }
+    p {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 900px) {
+    #search {
+        .container {
+            padding-right: 10px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            input {
+                height: 2em;
+            }
+            input[type=text] {
+                width: 100%;
+                margin-bottom: 10px;
+                margin: 0px 0px 10px 0px;
+            }
+        }
+    }
+    #categories {
+        ul li {
+            width: 50%;
+        }
+    }
+    #ads {
+        .items article {
+            width: 30%;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    #ads {
+        .items article {
+            width: 45%;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    #ads {
+        .items article {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    #header {
+        nav ul a span {
+            display: none;
+        }
+    }
+    #footer {
+        nav ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            li {
+                margin-top: 20px;
+                &:first-child {
+                    margin-top: 0px;
+                }
+            }
+        }
+    }
+}

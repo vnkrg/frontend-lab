@@ -5,35 +5,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <title>AD SERVICE: QLX</title>
+        <title>QLX</title>
         <meta name="desctiption" content="Ad Service">
         <meta name="author" content="vnkrg">
 
-        <link href="style/reset.css" rel="stylesheet">
-        <link href="style/styles.css" rel="stylesheet">
-        <link href="style/normalize.css" rel="stylesheet">
+        <link href="css/reset.css" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet">
+        <link href="css/normalize.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
     </head>
     <body>
+
         <!-- header -->
-        <header class="header">
-            <a href=""><h1>QLX</h1></a>
+        <header id="header">
+            <a id="logo" href=""><h1>QLX</h1></a>
             <nav>
                 <ul>
                     <li>
                         <a href="">
                             <img src="images/icons/user.png" alt="" />
-                            <div class="text">
-                                <span>My profile</span>
-                            </div>
+                            <span>My profile</span>
                         </a>
                     </li>
                     <li>
                         <a href="">
                             <img src="images/icons/plus.png" alt="" />
-                            <div class="text">
-                                <span>Place an ad</span>
-                            </div>
+                            <span>Place an ad</span>
                         </a>
                     </li>
                 </ul>
@@ -41,227 +38,205 @@
         </header>
 
         <!-- search -->
-        <div class="search">
-            <form>
-                <input type="text" name="search" placeholder="Search..">
-                <input type="text" name="location" placeholder="Location..">
-                <button>Search</button>
-            </form>
+        <div id="search">
+            <div class="container">
+                <form>
+                    <input type="text" name="search" placeholder="Search..">
+                    <input type="text" name="location" placeholder="Location..">
+                    <input type="submit" value="Search">
+                </form>
+            </div>
         </div>
 
         <!-- categories -->
-        <div class="categories">
-            <ul>
-                <li>
-                    <a href="">
-                        <img src="images/icons/property.png" alt="" />
-                        <div class="text">
+        <div id="categories">
+            <div class="container">
+                <ul>
+                    <li>
+                        <a href="">
+                            <img src="images/icons/property.png" alt="" />
                             <span>Property</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="images/icons/transport.png" alt="" />
-                        <div class="text">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/icons/transport.png" alt="" />
                             <span>Transport</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="images/icons/transport_parts.png" alt="" />
-                        <div class="text">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/icons/transport_parts.png" alt="" />
                             <span>Spare parts for transport</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="images/icons/electronics.png" alt="" />
-                        <div class="text">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/icons/electronics.png" alt="" />
                             <span>Electronics</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="images/icons/job.png" alt="" />
-                        <div class="text">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/icons/job.png" alt="" />
                             <span>Job</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="images/icons/business.png" alt="" />
-                        <div class="text">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/icons/business.png" alt="" />
                             <span>Business & Services</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="images/icons/style.png" alt="" />
-                        <div class="text">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/icons/style.png" alt="" />
                             <span>Fashion & Style</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="images/icons/hobby.png" alt="" />
-                        <div class="text">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="images/icons/hobby.png" alt="" />
                             <span>Hobbies, leisure & sport</span>
-                        </div>
-                    </a>
-                </li>
-            </ul>
+                        </a>
+                    </li>
+                <ul>
+            </div>
         </div>
 
         <!-- ads -->
-        <section class="ads">
-            <h2>VIP-ADS</h2>
-            <article>
-                <header>
-                    <div class="box">
+        <section id="ads">
+            <div class="container">
+                <h2>VIP-ADS</h2>
+                <div class="items">
+                    <article>
                         <a href="">
                             <div class="image">
                                 <img src="images/pic1.jpg" alt="" />
                             </div>
                         </a>
-                    <div class="title">
-                        <a href="">
-                            <p>DUCATI PANIGALE V4</p>
-                        </a>
-                        <p class="price">25 000$</p>
-                    </div>
-                    </div>
-                </header>
-            </article>
-            <article>
-                <header>
-                    <a href="">
-                        <div class="image">
-                            <img src="images/pic2.jpg" alt="" />
+                        <div class="title">
+                            <a href="">
+                                <p>Buy a new Ducati Panigale V4!</p>
+                            </a>
+                            <p class="price">25 000$</p>
                         </div>
-                    </a>
-                    <div class="title">
+                    </article>
+                    <article>
                         <a href="">
-                            <p>ARTLINE RTX P99</p>
+                            <div class="image">
+                                <img src="images/pic2.jpg" alt="" />
+                            </div>
                         </a>
-                        <p class="price">7 500$</p>
-                    </div>
-                </header>
-            </article>
-            <article>
-                <header>
-                    <a href="">
-                        <div class="image">
-                            <img src="images/pic3.jpg" alt="" />
+                        <div class="title">
+                            <a href="">
+                                <p>Nvidia Tesla V100. Didn't participate in mining</p>
+                            </a>
+                            <p class="price">11 500$</p>
                         </div>
-                    </a>
-                    <div class="title">
+                    </article>
+                    <article>
                         <a href="">
-                            <p>Preorder Tesla Roadster!!!</p>
+                            <div class="image">
+                                <img src="images/pic3.jpg" alt="" />
+                            </div>
                         </a>
-                        <p class="price">250 000$</p>
-                    </div>
-                </header>
-            </article>
-            <article>
-                <header>
-                    <a href="">
-                        <div class="image">
-                            <img src="images/pic4.jpg" alt="" />
+                        <div class="title">
+                            <a href="">
+                                <p>Preorder Tesla Roadster!</p>
+                            </a>
+                            <p class="price">250 000$</p>
                         </div>
-                    </a>
-                    <div class="title">
+                    </article>
+                    <article>
                         <a href="">
-                            <p>Amazing apartments in ...</p>
+                            <div class="image">
+                                <img src="images/pic4.jpg" alt="" />
+                            </div>
                         </a>
-                        <p class="price">1 200 000$</p>
-                    </div>
-                </header>
-            </article>
-            <article>
-                <header>
-                    <a href="">
-                        <div class="image">
-                            <img src="images/pic5.jpg" alt="" />
+                        <div class="title">
+                            <a href="">
+                                <p>Amazing apartments in centre of New York</p>
+                            </a>
+                            <p class="price">1 200 000$</p>
                         </div>
-                    </a>
-                    <div class="title">
+                    </article>
+                    <article>
                         <a href="">
-                            <p>In a good condition Lamb...</p>
+                            <div class="image">
+                                <img src="images/pic5.jpg" alt="" />
+                            </div>
                         </a>
-                        <p class="price">350 000$</p>
-                    </div>
-                </header>
-            </article>
-            <article>
-                <header>
-                    <a href="">
-                        <div class="image">
-                            <img src="images/pic6.jpg" alt="" />
+                        <div class="title">
+                            <a href="">
+                                <p>In a good condition Lamborghini Aventador</p>
+                            </a>
+                            <p class="price">350 000$</p>
                         </div>
-                    </a>
-                    <div class="title">
+                    </article>
+                    <article>
                         <a href="">
-                            <p>Signed album of Lana ...</p>
+                            <div class="image">
+                                <img src="images/pic6.jpg" alt="" />
+                            </div>
                         </a>
-                        <p class="price">1000$</p>
-                    </div>
-                </header>
-            </article>
-            <article>
-                <header>
-                    <a href="">
-                        <div class="image">
-                            <img src="images/pic7.jpg" alt="" />
+                        <div class="title">
+                            <a href="">
+                                <p>Signed album of Lana Del Rey</p>
+                            </a>
+                            <p class="price">1000$</p>
                         </div>
-                    </a>
-                    <div class="title">
+                    </article>
+                    <article>
                         <a href="">
-                            <p>Buckwheat - 500 g</p>
+                            <div class="image">
+                                <img src="images/pic7.jpg" alt="" />
+                            </div>
                         </a>
-                        <p class="price">50$</p>
-                    </div>
-                </header>
-            </article>
-            <article>
-                <header>
-                    <a href="">
-                        <div class="image">
-                            <img src="images/pic8.jpg" alt="" />
+                        <div class="title">
+                            <a href="">
+                                <p>Buckwheat - 500 g</p>
+                            </a>
+                            <p class="price">50$</p>
                         </div>
-                    </a>
-                    <div class="title">
+                    </article>
+                    <article>
                         <a href="">
-                            <p>Toilet paper - 1 pack</p>
+                            <div class="image">
+                                <img src="images/pic8.jpg" alt="" />
+                            </div>
                         </a>
-                        <p class="price">100$</p>
-                    </div>
-                </header>
-            </article>
+                        <div class="title">
+                            <a href="">
+                                <p>Toilet paper - 1 pack</p>
+                            </a>
+                            <p class="price">100$</p>
+                        </div>
+                    </article>
+                    <article aria-hidden="true" class="hidden-item"></article>
+                    <article aria-hidden="true" class="hidden-item"></article>
+                    <article aria-hidden="true" class="hidden-item"></article>
+                </div>
+                <a id="show-all" href="">
+                    <span>Show all VIP-ads</span>
+                    <img src="images/icons/next.png" alt="" />
+                </a>
+            </div>
         </section>
-        <div class="show-all">
-            <a href="">
-                <span>Show all VIP-ads</span>
-                <img src="images/icons/next.png" alt="" />
-            </a>
-        </div>
 
         <!-- footer -->
-        <footer class="footer">
-            <hr />
-            <nav>
-                <ul>
-                    <li><a href="">Help</a></li>
-                    <li><a href="">Safety Regulations</a></li>
-                    <li><a href="">Terms of Use</a></li>
-                </ul>
-            </nav>
-            <p>Copyright &copy; 2020 vnkrg</p>
+        <footer id="footer">
+            <div class="container">
+                <hr />
+                <nav>
+                    <ul>
+                        <li><a href="">Help</a></li>
+                        <li><a href="">Safety Regulations</a></li>
+                        <li><a href="">Terms of Use</a></li>
+                    </ul>
+                </nav>
+                <p>Copyright &copy; 2020 vnkrg</p>
+            </div>
         </footer>
     </body>
+</html>
